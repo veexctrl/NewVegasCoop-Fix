@@ -1,0 +1,717 @@
+{
+	"modName": "NVCoop",
+	"displayName": "New Vegas Co-op",
+	"description": "Settings for New Vegas Co-op",
+	"saveFile": "NVCoop.ini",
+	"minMCMVersion": 1.0,
+	"minModVersion": 1.0,
+	"submenus": {
+		"0": {
+			"listTitle": "Settings",
+			"pageTitle": "New Vegas Co-op",
+			"columns": 1,
+			"enable": 1,
+			"options": {
+				"1": {
+					"title": "Chat",
+					"enable": 1,
+					"type": 0
+				},
+				"2": {
+					"title": "Text Chat",
+					"type": 5,
+					"enable": 1,
+					"mouse": "Chat lines float above the player who said them",
+					"vars": [
+						{
+							"configINI": "Settings:bChat",
+							"default": 1
+						}
+					]
+				},
+				"3": {
+					"title": "Chat Key",
+					"type": 3,
+					"enable": 1,
+					"mouse": "The key that opens the chat line (Enter sends, Esc cancels)",
+					"vars": [
+						{
+							"configINI": "Settings:iChatKey",
+							"default": 21
+						}
+					],
+					"keybind": {
+						"type": 0
+					}
+				},
+				"4": {
+					"title": "Text-to-Speech",
+					"enable": 1,
+					"type": 0
+				},
+				"5": {
+					"title": "Read Chat Out Loud",
+					"type": 5,
+					"enable": 1,
+					"mouse": "Chat lines are spoken from where the player is: louder near, to the side they're on",
+					"vars": [
+						{
+							"configINI": "Settings:bChatSpeech",
+							"default": 1
+						}
+					]
+				},
+				"6": {
+					"title": "Speech Volume",
+					"type": 2,
+					"enable": 1,
+					"mouse": "How loud chat lines are read out",
+					"vars": [
+						{
+							"configINI": "Settings:iChatSpeechVolume",
+							"default": 80
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 5,
+						"valueMin": 0,
+						"valueMax": 100,
+						"suffix": "%"
+					}
+				},
+				"7": {
+					"title": "Your Voice",
+					"type": 1,
+					"enable": 1,
+					"mouse": "The voice everyone hears your chat lines in",
+					"vars": [
+						{
+							"configINI": "Settings:iVoice",
+							"default": 0
+						}
+					],
+					"strings": [
+						"Male",
+						"Female"
+					]
+				},
+				"8": {
+					"title": "Which Voice",
+					"type": 1,
+					"enable": 1,
+					"mouse": "If a PC has more than one voice of that kind, which one (Windows usually has one of each)",
+					"vars": [
+						{
+							"configINI": "Settings:iVoiceVariant",
+							"default": 0
+						}
+					],
+					"strings": [
+						"First",
+						"Second",
+						"Third",
+						"Fourth"
+					]
+				},
+				"9": {
+					"title": "Your Voice's Pitch",
+					"type": 2,
+					"enable": 1,
+					"mouse": "Lower or higher than the voice's own",
+					"vars": [
+						{
+							"configINI": "Settings:iVoicePitch",
+							"default": 0
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 1,
+						"valueMin": -10,
+						"valueMax": 10
+					}
+				},
+				"10": {
+					"title": "Your Voice's Speed",
+					"type": 2,
+					"enable": 1,
+					"mouse": "Slower or faster than the voice's own",
+					"vars": [
+						{
+							"configINI": "Settings:iVoiceSpeed",
+							"default": 0
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 1,
+						"valueMin": -10,
+						"valueMax": 10
+					}
+				},
+				"11": {
+					"title": "Voice Effect",
+					"type": 1,
+					"enable": 1,
+					"mouse": "Radio: a crackly walkie-talkie. Robot: metallic. Echo. Megaphone: loud and harsh",
+					"vars": [
+						{
+							"configINI": "Settings:iVoiceEffect",
+							"default": 0
+						}
+					],
+					"strings": [
+						"None",
+						"Radio",
+						"Robot",
+						"Echo",
+						"Megaphone"
+					]
+				},
+				"12": {
+					"title": "Voice Chat",
+					"enable": 1,
+					"type": 0
+				},
+				"13": {
+					"title": "Voice Chat",
+					"type": 5,
+					"enable": 1,
+					"mouse": "Talk to the others with your microphone (through Steam's voice), heard from where you are",
+					"vars": [
+						{
+							"configINI": "Settings:bVoiceChat",
+							"default": 1
+						}
+					]
+				},
+				"14": {
+					"title": "Talk Mode",
+					"type": 1,
+					"enable": 1,
+					"mouse": "Push to talk: hold the key to talk. Open mic: always on (Steam leaves out the silence)",
+					"vars": [
+						{
+							"configINI": "Settings:iVoiceChatMode",
+							"default": 0
+						}
+					],
+					"strings": [
+						"Push to Talk",
+						"Open Mic"
+					]
+				},
+				"15": {
+					"title": "Push-to-Talk Key",
+					"type": 3,
+					"enable": 1,
+					"mouse": "Hold it to talk",
+					"vars": [
+						{
+							"configINI": "Settings:iVoiceChatKey",
+							"default": 48
+						}
+					],
+					"keybind": {
+						"type": 0
+					}
+				},
+				"16": {
+					"title": "Voice Volume",
+					"type": 2,
+					"enable": 1,
+					"mouse": "How loud the others' voices are",
+					"vars": [
+						{
+							"configINI": "Settings:iVoiceChatVolume",
+							"default": 100
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 5,
+						"valueMin": 0,
+						"valueMax": 100,
+						"suffix": "%"
+					}
+				},
+				"17": {
+					"title": "Mouths Move When Talking",
+					"type": 5,
+					"enable": 1,
+					"mouse": "A player's character opens and shuts its mouth while they talk or their chat line is read out",
+					"vars": [
+						{
+							"configINI": "Settings:bMouths",
+							"default": 1
+						}
+					]
+				},
+				"18": {
+					"title": "New Game",
+					"enable": 1,
+					"type": 0
+				},
+				"19": {
+					"title": "Skip DLC Intro Popups",
+					"type": 5,
+					"enable": 1,
+					"mouse": "The DLCs' and Courier's Stash packs' boxes when you leave Doc Mitchell's house aren't shown (you still get everything)",
+					"vars": [
+						{
+							"configINI": "Settings:bSkipDlcPopups",
+							"default": 1
+						}
+					]
+				},
+				"20": {
+					"title": "World",
+					"enable": 1,
+					"type": 0
+				},
+				"21": {
+					"title": "Synced Radio",
+					"type": 5,
+					"enable": 1,
+					"mouse": "Your radios and Pip-Boy play the host's stations, in step with the host",
+					"vars": [
+						{
+							"configINI": "Settings:bSyncRadio",
+							"default": 1
+						}
+					]
+				},
+				"22": {
+					"title": "Desync Notices",
+					"type": 5,
+					"enable": 1,
+					"mouse": "A corner message when your game and another player's disagree for a while",
+					"vars": [
+						{
+							"configINI": "Settings:bDesyncNotices",
+							"default": 1
+						}
+					]
+				},
+				"23": {
+					"title": "Display",
+					"enable": 1,
+					"type": 0
+				},
+				"25": {
+					"title": "Friend Markers",
+					"type": 5,
+					"enable": 1,
+					"mouse": "A chevron and the name over each friend, so you can find them",
+					"vars": [
+						{
+							"configINI": "Settings:bFriendMarkers",
+							"default": 1
+						}
+					]
+				},
+				"24": {
+					"title": "Field of View",
+					"type": 2,
+					"enable": 1,
+					"mouse": "How wide you see the world (0: the game's own, 75). Your hands and weapon stay as they are",
+					"vars": [
+						{
+							"configINI": "Settings:iFieldOfView",
+							"default": 0
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 5,
+						"valueMin": 0,
+						"valueMax": 120
+					}
+				},
+				"26": {
+					"title": "Joining by IP",
+					"enable": 1,
+					"type": 0
+				},
+				"27": {
+					"title": "Show My Address",
+					"type": 5,
+					"enable": 1,
+					"mouse": "Switch on to see this PC's addresses for friends joining by IP (only you see them; off and on again to see them again)",
+					"vars": [
+						{
+							"configINI": "Settings:bShowAddress",
+							"default": 0
+						}
+					]
+				},
+				"28": {
+					"title": "Co-op Settings (the host's count for everyone)",
+					"enable": 1,
+					"type": 0
+				},
+				"29": {
+					"title": "Co-op Balanced",
+					"type": 5,
+					"enable": 1,
+					"mouse": "Harder and made for a group: smarter enemies, scarcer supplies, slower leveling. Leave it off if you use mods that change the game's balance",
+					"vars": [
+						{
+							"configINI": "Settings:bCoopBalanced",
+							"default": 0
+						}
+					]
+				},
+				"30": {
+					"title": "Friendly Fire",
+					"type": 5,
+					"enable": 1,
+					"mouse": "Players' shots and explosions can hurt each other",
+					"vars": [
+						{
+							"configINI": "Settings:bFriendlyFire",
+							"default": 0
+						}
+					]
+				},
+				"31": {
+					"title": "Areas Around Far Friends",
+					"type": 5,
+					"enable": 1,
+					"mouse": "When you host, the area around a friend far from you runs in your game too, so its creatures are the same for both of you. About 10 MB of memory a cell; off: they wait, held still, until you come near",
+					"vars": [
+						{
+							"configINI": "Settings:bFarAreas",
+							"default": 1
+						}
+					]
+				}
+			}
+		},
+		"1": {
+			"listTitle": "Conversations",
+			"pageTitle": "Nearby Conversations",
+			"columns": 1,
+			"enable": 1,
+			"options": {
+				"1": {
+					"title": "General",
+					"enable": 1,
+					"type": 0
+				},
+				"2": {
+					"title": "Show Nearby Conversations",
+					"type": 5,
+					"enable": 1,
+					"mouse": "When a friend near you talks to someone, what they both say is listed on your screen",
+					"vars": [
+						{
+							"configINI": "Settings:bTalkLog",
+							"default": 1
+						}
+					]
+				},
+				"3": {
+					"title": "Preview",
+					"type": 5,
+					"enable": 1,
+					"mouse": "Fills the log with sample lines so you can try its position and look. Close the menu to see it. It turns itself off when a game loads",
+					"vars": [
+						{
+							"configINI": "Settings:bTalkLogPreview",
+							"default": 0
+						}
+					]
+				},
+				"4": {
+					"title": "Distance",
+					"type": 2,
+					"enable": 1,
+					"mouse": "How close you need to be to the one talking (1500: as far as you hear them)",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogRange",
+							"default": 1500
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 250,
+						"valueMin": 250,
+						"valueMax": 8000
+					}
+				},
+				"5": {
+					"title": "Lines",
+					"type": 2,
+					"enable": 1,
+					"mouse": "How many lines show at once",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogLines",
+							"default": 4
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 1,
+						"valueMin": 1,
+						"valueMax": 10
+					}
+				},
+				"6": {
+					"title": "Seconds",
+					"type": 2,
+					"enable": 1,
+					"mouse": "How long each line stays before it fades out",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogSeconds",
+							"default": 15
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 1,
+						"valueMin": 3,
+						"valueMax": 60
+					}
+				},
+				"7": {
+					"title": "Position",
+					"enable": 1,
+					"type": 0
+				},
+				"8": {
+					"title": "Place",
+					"type": 1,
+					"enable": 1,
+					"mouse": "Above HP Bar: the log sits just above your HP bar and grows upward. Custom: it goes where the two sliders below say",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogPlace",
+							"default": 0
+						}
+					],
+					"strings": [
+						"Above HP Bar",
+						"Custom"
+					]
+				},
+				"9": {
+					"title": "Horizontal Position",
+					"type": 2,
+					"enable": 1,
+					"mouse": "With Place set to Custom: how far across the screen the log starts, in percent. It stays on screen",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogX",
+							"default": 2
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 1,
+						"valueMin": 0,
+						"valueMax": 100
+					}
+				},
+				"10": {
+					"title": "Vertical Position",
+					"type": 2,
+					"enable": 1,
+					"mouse": "With Place set to Custom: how far down the screen the log starts, in percent. It stays on screen",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogY",
+							"default": 25
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 1,
+						"valueMin": 0,
+						"valueMax": 100
+					}
+				},
+				"11": {
+					"title": "Width",
+					"type": 2,
+					"enable": 1,
+					"mouse": "How wide the log gets before a line moves down to the next one. Lower it to keep clear of other parts of the HUD",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogWidth",
+							"default": 600
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 20,
+						"valueMin": 200,
+						"valueMax": 1200
+					}
+				},
+				"12": {
+					"title": "Alignment",
+					"type": 1,
+					"enable": 1,
+					"mouse": "Which side of the log the lines sit against. Right suits a log on the right of the screen",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogAlign",
+							"default": 0
+						}
+					],
+					"strings": [
+						"Left",
+						"Right"
+					]
+				},
+				"13": {
+					"title": "Look",
+					"enable": 1,
+					"type": 0
+				},
+				"14": {
+					"title": "Text Size",
+					"type": 2,
+					"enable": 1,
+					"mouse": "How big the lines are, in percent",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogSize",
+							"default": 65
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 5,
+						"valueMin": 40,
+						"valueMax": 150
+					}
+				},
+				"15": {
+					"title": "Spacing",
+					"type": 2,
+					"enable": 1,
+					"mouse": "The gap between lines",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogGap",
+							"default": 6
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 1,
+						"valueMin": 0,
+						"valueMax": 40
+					}
+				},
+				"16": {
+					"title": "Readability",
+					"type": 1,
+					"enable": 1,
+					"mouse": "What helps the text read over bright places: a thin dark outline, a drop shadow or a dark bar behind it",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogStyle",
+							"default": 1
+						}
+					],
+					"strings": [
+						"None",
+						"Outline",
+						"Shadow",
+						"Dark Bar"
+					]
+				},
+				"17": {
+					"title": "Dividers",
+					"type": 5,
+					"enable": 1,
+					"mouse": "A thin line under each line",
+					"vars": [
+						{
+							"configINI": "Settings:bTalkLogDividers",
+							"default": 1
+						}
+					]
+				},
+				"18": {
+					"title": "Colour",
+					"enable": 1,
+					"type": 0
+				},
+				"19": {
+					"title": "Use HUD Colour",
+					"type": 5,
+					"enable": 1,
+					"mouse": "Show the lines in your HUD's colour instead of the colour below",
+					"vars": [
+						{
+							"configINI": "Settings:bTalkLogHudColor",
+							"default": 1
+						}
+					]
+				},
+				"20": {
+					"title": "Red",
+					"type": 2,
+					"enable": 1,
+					"mouse": "The red in the lines' colour",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogRed",
+							"default": 255
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 5,
+						"valueMin": 0,
+						"valueMax": 255
+					}
+				},
+				"21": {
+					"title": "Green",
+					"type": 2,
+					"enable": 1,
+					"mouse": "The green in the lines' colour",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogGreen",
+							"default": 255
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 5,
+						"valueMin": 0,
+						"valueMax": 255
+					}
+				},
+				"22": {
+					"title": "Blue",
+					"type": 2,
+					"enable": 1,
+					"mouse": "The blue in the lines' colour",
+					"vars": [
+						{
+							"configINI": "Settings:iTalkLogBlue",
+							"default": 255
+						}
+					],
+					"scale": {
+						"valueDecimal": 0,
+						"valueIncrement": 5,
+						"valueMin": 0,
+						"valueMax": 255
+					}
+				}
+			}
+		}
+	}
+}

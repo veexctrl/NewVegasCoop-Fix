@@ -1,0 +1,9 @@
+// New Vegas Co-op by Zyrcxies (https://github.com/Zyrcxies/NewVegasCoop). Reusing this code? See LICENSE: credit and the same license are required.
+
+#pragma once
+
+namespace game
+{
+    void KeepWorldRunningInEscapeMenu();
+    void EscapeMenuLive(bool live);
+}
