@@ -10,7 +10,8 @@
 - **Host save crash (`FalloutNV.exe+0x44E3AA`).** About six seconds after the guest disconnected, a manual save
   crashed while the game tried to serialize an actor reference in a dead gecko's AI state. This build logs the
   departing character's form ID and address before cleanup, so a new crash dump can show whether the bad pointer
-  referred to that character. A host fix is pending.
+  referred to that character. The host had no crashes in the latest reported co-op session. The original save-after-disconnect
+  scenario still needs verification.
 - The 32-bit Release build and automated tests passed. The original in-game scenarios still need verification.
 
 ## 0.1.11
