@@ -4,8 +4,9 @@
 
 - **Guest Take All crash (`FalloutNV.exe+0xC3A0C`).** Pressing **A / Take All** while looting Barton Thorn's corpse
   crashed the guest. The engine tried to use an invalid inventory stack while transferring a 9mm pistol. This build
-  refreshes the open container's item list immediately before the engine transfers the loot in co-op. A two-player
-  replay is still needed to verify that the guest receives the items and the host's container inventory updates.
+  refreshes the open container's item list immediately before the engine transfers the loot in co-op. The guest
+  reported no further crashes when using Take All after installing the patch. Inventory sync for Take All still
+  needs verification on both sides.
 - **Host save crash (`FalloutNV.exe+0x44E3AA`).** About six seconds after the guest disconnected, a manual save
   crashed while the game tried to serialize an actor reference in a dead gecko's AI state. This build logs the
   departing character's form ID and address before cleanup, so a new crash dump can show whether the bad pointer
