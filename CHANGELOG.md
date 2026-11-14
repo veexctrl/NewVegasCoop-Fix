@@ -2,6 +2,11 @@
 
 ## 0.1.11 crash test build
 
+- **Guest single-item loot crash (under investigation, `FalloutNV.exe+0xC3A0C`).** Three November 14 dumps
+  show the guest crashing while taking one item after the host synced the open container. The game tried to
+  use an invalid inventory stack from the selected row. A local test patch refreshes the loot list and asks
+  the guest to select the item again when it detects an invalid row. Two-player testing is still needed to
+  confirm crash prevention and inventory sync.
 - **Guest Take All crash (`FalloutNV.exe+0xC3A0C`).** Pressing **A / Take All** while looting Barton Thorn's corpse
   crashed the guest. The engine tried to use an invalid inventory stack while transferring a 9mm pistol. This build
   refreshes the open container's item list immediately before the engine transfers the loot in co-op. The guest
